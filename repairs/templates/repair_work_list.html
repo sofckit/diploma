@@ -1,15 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Repair Work List</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
 </head>
 <body>
-    <h2>Repair Work List</h2>
+    <h2 class="">Repair Work List</h2>
     <ul>
         {% for work in repair_works %}
             <li>{{ work.title }} - {{ work.description }}</li>
         {% endfor %}
     </ul>
     <a href="{% url 'add_repair_work' %}">Add New Repair Work</a>
+    <br>
+    <a href="{% url 'home' %}">Back to Home</a>
+    <br>
+    <a href="{% url 'logout' %}">Logout</a>
 </body>
 </html>

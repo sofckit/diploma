@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+        <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+    <h2>Welcome to the Repair Work Management System</h2>
+    <p>Logged in as {{ request.user.username }}</p>
+    <ul>
+        <li><a href="{% url 'repair_work_list' %}">View Repair Work List</a></li>
+        <li><a href="{% url 'add_repair_work' %}">Add New Repair Work</a></li>
+        <li><a href="{% url 'repair_work_stats' %}">View Repair Work Statistics</a></li>
+    </ul>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

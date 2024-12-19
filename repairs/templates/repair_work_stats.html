@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Repair Work Statistics</title>
+        <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+    <h2>Repair Work Statistics</h2>
+    <ul>
+        <li>Total Repair Works: {{ total_repair_works }}</li>
+        <li>Repair Works in Last 7 Days: {{ stats_last_week }}</li>
+        <li>Repair Works in Last 30 Days: {{ stats_last_month }}</li>
+    </ul>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>
